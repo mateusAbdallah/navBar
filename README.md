@@ -1,1 +1,1 @@
-Build a responsive navbar using JavaScript.
+Building a responsive navbar using JavaScript.
