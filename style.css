@@ -4,9 +4,36 @@
     --transition: all 0.3s linear;
     --ff-primary: "Roboto", sans-serif;
     --ff-secondary: "Open Sans", sans-serif;
+    --clr-grey-10: hsl (210, 36%, 96%);
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+   box-shadow: var(--light-shadow);  
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
 
 }
 
 .logo {
     font-family: var(--ff-secondary);
+    font-size: 26px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 20%;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    height: 20px;
+    width: 30px;
 }
