@@ -23,66 +23,36 @@ nav {
    box-shadow: var(--light-shadow);  
    display: flex;
    align-items: center;
-   justify-content: space-around;   
-}
-
-.logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;    
+   justify-content: space-around;
 }
 
 .logo p {
     font-family: var(--ff-secondary);
-    font-size: 32px;
-    padding-left: 2.5rem;
+    font-size: 1.5rem;
+        
 }
 
 .logo span {
     color: var(--clr-primary-5);
 }
 
-.nav-toggle {
-    font-size: 1.25rem;
-    background: transparent;
-    border: none;
-    height: 20px;
-    width: 30px;
-    transition: var(--transition);
-}
-
-.nav-toggle:hover {
-    cursor: pointer;
-    color: var(--clr-primary-1);
-    transform: rotate(90deg);
-}
-
-ul {
+.links, .social-media {
     list-style-type: none;
     display: flex;
     justify-content: space-evenly;
     width: 30%;
 }
 
-.links {
-    height: 0;
-    overflow: hidden;
-    transition: var(--transition);
-}
-
 .links a {
     text-decoration: none;
     font-family: var(--ff-secondary);
     font-size: 20px;
-    color: var(--clr-grey-3);    
-}
+    color: var(--clr-grey-3);  
+    display: none;
+}    
 
 .links a:hover {
     color: var(--clr-primary-5);
-}
-
-.show-links {
-    height: 10rem;
 }
 
 .social-media {
@@ -91,31 +61,48 @@ ul {
 }
 
 .social-media a {
-    color: var(--clr-primary-5);
+    color: var(--clr-primary-5);    
 }
 
 .social-media a:hover {
     color: var(--clr-primary-7);
 }
 
- @media screen and (min-width: 375px) and (max-width: 768px){
-    .links {
-        display: none;
-    }
-
-    .social-media {
-        display: none;
-    }
+.nav-toggle {
+    font-size: 1.2rem;
+    background: transparent;
+    border: none;
+    height: 10px;
+    width: 10px;
+    transition: var(--transition);
+    
 }
 
-@media screen and (min-width: 1024px) {
-    .nav-toggle {
-        display: none;
-    }
-
-    .links {
-        height: auto;
-        display: flex;
-    }
+.nav-toggle:hover {
+    cursor: pointer;
+    color: var(--clr-primary-1);
+    transform: rotate(90deg);
 }
 
+.menu {    
+    display: flex;
+    flex-direction: column;
+    width: 75vw;
+    height: 100vh;
+    position: absolute;
+    top: -100vw;
+    transition: .40s;   
+}
+
+.menu a {
+    text-decoration: none;
+    margin: 1.2rem;
+    font-size: 1.2rem;
+    color: var(--clr-primary-1);
+    line-height: 2rem;
+}
+
+.menu--ativo {
+    top: 0;
+    transition: .40s;
+}
